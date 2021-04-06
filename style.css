@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: rgb(30, 30, 30);
+}
+
+.topnav {  /* Barra de opçoes superior  */
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {  /* texto da Barra de opçoes superior  */
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-weight: 500px;
+  font-size: 17px;
+}
+
+.catBar {
+  float: left;
+  overflow: hidden;
+}
+
+.catBar .catBarBtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.catBar-opt{
+  display: none;
+  position: absolute;
+  background-color: rgb(32, 32, 32);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.catBar-opt a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.catBar:hover .catBar-opt {
+  display: block;
+}
+
+.topnav a:hover, .catBar:hover .catBarBtn {    /* muda a cor do texto da Barra de opçoes superior e o seu fundo  */
+  background-color: rgb(61, 152, 168);
+  color: black;
+}
+
+.topnav a.active {   /* Muda a Cor e o fundo do nome do site na Barra de opçoes superior  */
+  background-color: #1f588d;
+  color: white;
+}
+
+.topnav a.right {    /* alinha o Sobre a direita  */
+  float: right;
+}
+
+.list{               /* Caixa Onde estão as listas de filmes*/
+  display: flex;
+  overflow-x: scroll;
+  height:282px;
+  scroll-behavior: smooth;
+}
+
+.listAlign{
+  display: flex;
+}
+
+.listBtn{
+  width: 50px;
+  background-color: rgb(15, 15, 15);
+  color: white;
+  opacity: 0.1;
+  border: 0;
+}
+
+.listBtn:hover{
+  opacity: 0.5;
+  transition: all ease 0.2s;
+}
+
+.listBtn:focus .listBtn:active{
+  border: 0;
+}
+
+.Text{               /*Info e tamanho do texto de Categorias das listas de filmes*/
+  color: white;
+  font-size: 20px;
+  margin-left: 50px;
+}
+
+.image{             /*Imagem que representa o filme*/
+  width:186px;
+  height:282px;
+  transform: scale(0.85);
+}
+
+.image:hover {         /*Aumenta a Imagem que representa o filme quando passa com o mouse por cima*/
+  transform: scale(1);
+  transition: all ease 0.2s;
+}
+
+.list::-webkit-scrollbar { /* Esconde a scrollbar na caixa onde está a lista de filmes */
+  display: none;
+}
+
+body::-webkit-scrollbar{  /* Esconde a scrollbar do site */
+  display: none;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #111111;
+  color: white;
+}
+
+.modal-body {
+  padding: 2px 16px;
+  background-color: rgb(63, 63, 63);
+}
+
+.modalMovIf{
+  margin-top: 10px;
+  overflow: auto;
+}
+
+.modalMovIf iframe{
+  float: left;
+}
+
+.modalMovIf .Sin {
+  margin-left: 575px;
+}
+
+.title{
+  color: white;
+  margin-right: 5px;
+}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #111111;
+  color: white;
+  overflow: auto;
+}
+
+.modal-footer img{
+  float: right;
+  margin-right: -14px;
+}
+
+.infoAlign{
+  display: flex;
+  margin-bottom: -20px;
+  margin-top: -20px;
+}
+
+.infoFlex{
+  display: flex;
+}
+
+.pMargin{
+  margin-right: 5px;
+}
+
+footer{
+  text-align: center;
+  background-color: rgb(16, 16, 16);
+  color: rgb(37, 37, 37);
+  margin-top: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
